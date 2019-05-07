@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "email": {
+            "required": true,
+            "type": "string"
+        },
+        "fix_typos": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

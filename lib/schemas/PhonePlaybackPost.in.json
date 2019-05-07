@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "description": "The phone number to call. Must be valid international format",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "audio_url": {
+                    "description": "A URL to a valid audio file. Accepted audio formats are: MP3, WAV, OGG",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

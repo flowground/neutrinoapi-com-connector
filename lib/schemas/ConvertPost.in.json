@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "from_value": {
+                    "description": "The value to convert from",
+                    "type": "string"
+                },
+                "from_type": {
+                    "description": "The type of the value to convert from",
+                    "type": "string"
+                },
+                "to_type": {
+                    "description": "The type to convert to",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

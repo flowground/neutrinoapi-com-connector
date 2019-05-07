@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "The HTML content. This can be either a URL to load HTML from or an actual HTML content string",
+                    "type": "string"
+                },
+                "output_type": {
+                    "description": "The level of sanitization, possible values are: plain-text, simple-text, basic-html, basic-html-with-images, advanced-html",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "content"
+            ]
+        }
+    }
+}

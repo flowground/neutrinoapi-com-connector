@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "The source content. This can be either a URL to load from or an actual content string",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "The code type. See the API docs for all supported types",
+                    "type": "string"
+                },
+                "add_keyword_links": {
+                    "description": "Add links on source code keywords to the relevant language documentation",
+                    "type": "boolean",
+                    "default": false
+                }
+            },
+            "required": [
+                "content"
+            ]
+        }
+    }
+}

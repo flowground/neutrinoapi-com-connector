@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "opacity": {
+                    "description": "The opacity of the watermark (0 to 100)",
+                    "type": "integer",
+                    "format": "int32",
+                    "default": 50
+                },
+                "format": {
+                    "description": "The output image format, can be either png or jpg",
+                    "type": "string",
+                    "default": "png"
+                },
+                "position": {
+                    "description": "The position of the watermark image, possible values are: center, top-left, top-center, top-right, bottom-left, bottom-center, bottom-right",
+                    "type": "string",
+                    "default": "center"
+                },
+                "width": {
+                    "description": "If set resize the resulting image to this width (preserving aspect ratio)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "height": {
+                    "description": "If set resize the resulting image to this height (preserving aspect ratio)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "image_url": {
+                    "description": "The URL to the source image",
+                    "type": "string"
+                },
+                "watermark_url": {
+                    "description": "The URL to the watermark image",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "image-url"
+            ]
+        }
+    }
+}

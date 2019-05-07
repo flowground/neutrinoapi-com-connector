@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "content": {
+                    "description": "The HTML content. This can be either a URL to load HTML from or an actual HTML content string",
+                    "type": "string"
+                },
+                "tag": {
+                    "description": "The HTML tag(s) to extract data from. This can just be a simple tag name like 'img' OR a CSS/jQuery style selector",
+                    "type": "string"
+                },
+                "attribute": {
+                    "description": "If set, then extract data from the specified tag attribute. If not set, then data will be extracted from the tags inner content",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "base_url": {
+                    "description": "The base URL to replace into realive links",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

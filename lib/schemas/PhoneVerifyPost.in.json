@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "description": "The phone number to send the verification code to",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "code_length": {
+                    "description": "The number of digits to use in the security code (between 4 and 12)",
+                    "type": "integer",
+                    "format": "int32",
+                    "default": 6
+                },
+                "security_code": {
+                    "description": "Pass in your own security code. This is useful if you have implemented TOTP or similar 2FA methods. If not set then we will generate a secure random code (only numerical security codes are currently supported)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "playback_delay": {
+                    "description": "The delay in milliseconds between the playback of each security code",
+                    "type": "integer",
+                    "format": "int32",
+                    "default": 800
+                },
+                "country_code": {
+                    "description": "ISO 2-letter country code, assume numbers are based in this country. If not set numbers are assumed to be in international format (with or without the leading + sign)",
+                    "type": "string"
+                },
+                "language_code": {
+                    "description": "The language to playback the verification code in, available languages are: de - German, en - English, es - Spanish, fr - Fench, it - Italian, pt - Portuguese, ru - Russian",
+                    "type": "string",
+                    "default": "en"
+                }
+            }
+        }
+    }
+}

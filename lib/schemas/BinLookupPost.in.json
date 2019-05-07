@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "bin_number": {
+                    "description": "The BIN or IIN number (the first 6 digits of a credit card number)",
+                    "type": "string"
+                },
+                "customer_ip": {
+                    "description": "Pass in a customers remote IP address. The API will then determine the country of the IP address and match it against the BIN country. This feature is designed for fraud prevention and detection checks.",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

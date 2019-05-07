@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "description": "The URL to process",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "fetch_content": {
+                    "description": "If this URL responds with html, text, json or xml then return the response. This option is useful if you want to perform further processing on the URL content",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

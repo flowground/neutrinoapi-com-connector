@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "number": {
+                    "description": "A phone number",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "country_code": {
+                    "description": "ISO 2-letter country code, assume numbers are based in this country. If not set numbers are assumed to be in international format (with or without the leading + sign)",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "security_code": {
+                    "description": "The security code to verify",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        }
+    }
+}

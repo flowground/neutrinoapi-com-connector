@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "description": "The address or partial address to try and locate",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "country_code": {
+                    "description": "The ISO 2-letter country code to be biased towards (default is no country bias)",
+                    "type": "string"
+                },
+                "language_code": {
+                    "description": "The language to display results in, available languages are: de, en, es, fr, it, pt, ru",
+                    "type": "string",
+                    "default": "en"
+                },
+                "fuzzy_search": {
+                    "description": "If no matches are found for the given address, start performing a recursive fuzzy search until a geolocation is found. We use a combination of approximate string matching and data cleansing to find possible location matches",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        }
+    }
+}

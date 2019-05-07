@@ -1,0 +1,486 @@
+{
+    "title": "NeutrinoAPI",
+    "description": "The general-purpose API",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/neutrinoapi.com/3.3.5/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://neutrinoapi.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "api-key": {
+                "label": "api-key (api-key)",
+                "viewClass": "TextFieldView",
+                "note": "Your API key"
+            },
+            "user-id": {
+                "label": "user-id (user-id)",
+                "viewClass": "TextFieldView",
+                "note": "Your user ID"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "BadWordFilterPost": {
+            "main": "./lib/actions/BadWordFilterPost.js",
+            "title": "Bad Word Filter",
+            "description": "Detect bad words, swear words and profanity in a given text",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/BadWordFilterPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "BinLookupPost": {
+            "main": "./lib/actions/BinLookupPost.js",
+            "title": "BIN Lookup",
+            "description": "Perform a BIN (Bank Identification Number) or IIN (Issuer Identification Number) lookup. See: https://www.neutrinoapi.com/api/bin-lookup/",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/BinLookupPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CodeHighlightPost": {
+            "main": "./lib/actions/CodeHighlightPost.js",
+            "title": "Code Highlight",
+            "description": "Code highlight will take raw source code and convert into nicely formatted HTML with syntax and keyword highlighting",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CodeHighlightPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ConvertPost": {
+            "main": "./lib/actions/ConvertPost.js",
+            "title": "Convert",
+            "description": "A powerful unit and currency conversion tool",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ConvertPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "EmailValidatePost": {
+            "main": "./lib/actions/EmailValidatePost.js",
+            "title": "Email Validate",
+            "description": "Parse, validate and clean an email address",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/EmailValidatePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "EmailVerifyPost": {
+            "main": "./lib/actions/EmailVerifyPost.js",
+            "title": "Email Verify",
+            "description": "SMTP based email address verification",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/EmailVerifyPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GeocodeAddressPost": {
+            "main": "./lib/actions/GeocodeAddressPost.js",
+            "title": "Geocode Address",
+            "description": "Geocode an address, partial address or the name of a location",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GeocodeAddressPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GeocodeReversePost": {
+            "main": "./lib/actions/GeocodeReversePost.js",
+            "title": "Geocode Reverse",
+            "description": "Convert a geographic coordinate (latitude and longitude) into a real world address or location.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GeocodeReversePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "HlrLookupPost": {
+            "main": "./lib/actions/HlrLookupPost.js",
+            "title": "HLR Lookup",
+            "description": "Connect to the global mobile cellular network and retrieve the status of a mobile device",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/HlrLookupPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "HostReputationPost": {
+            "main": "./lib/actions/HostReputationPost.js",
+            "title": "Host Reputation",
+            "description": "Check the reputation of an IP address or domain against a comprehensive list of blacklists and blocklists (DNSBLs)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/HostReputationPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "HtmlCleanPost": {
+            "main": "./lib/actions/HtmlCleanPost.js",
+            "title": "HTML Clean",
+            "description": "Clean and sanitize untrusted HTML",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/HtmlCleanPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "HtmlExtractTagsPost": {
+            "main": "./lib/actions/HtmlExtractTagsPost.js",
+            "title": "HTML Extract",
+            "description": "Extract specific HTML tag contents or attributes from complex HTML or XHTML content",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/HtmlExtractTagsPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Html5RenderPost": {
+            "main": "./lib/actions/Html5RenderPost.js",
+            "title": "HTML5 Render",
+            "description": "Render HTML and HTML5 content to PDF, JPG or PNG",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Html5RenderPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ImageResizePost": {
+            "main": "./lib/actions/ImageResizePost.js",
+            "title": "Image Resize",
+            "description": "Resize an image and output as either JPEG or PNG. See: https://www.neutrinoapi.com/api/image-resize/",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ImageResizePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ImageWatermarkPost": {
+            "main": "./lib/actions/ImageWatermarkPost.js",
+            "title": "Image Watermark",
+            "description": "Watermark one image with another image. See: https://www.neutrinoapi.com/api/image-watermark/",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ImageWatermarkPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "IpBlocklistPost": {
+            "main": "./lib/actions/IpBlocklistPost.js",
+            "title": "IP Blocklist",
+            "description": "The IP Blocklist API will detect potentially malicious or dangerous IP addresses",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/IpBlocklistPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "IpInfoPost": {
+            "main": "./lib/actions/IpInfoPost.js",
+            "title": "IP Info",
+            "description": "Get location information about an IP address and do reverse DNS (PTR) lookups.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/IpInfoPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "IpProbePost": {
+            "main": "./lib/actions/IpProbePost.js",
+            "title": "IP Probe",
+            "description": "Analyze and extract provider information for an IP address",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/IpProbePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PhonePlaybackPost": {
+            "main": "./lib/actions/PhonePlaybackPost.js",
+            "title": "Phone Playback",
+            "description": "Make an automated call to any valid phone number and playback an audio message",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PhonePlaybackPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PhoneValidatePost": {
+            "main": "./lib/actions/PhoneValidatePost.js",
+            "title": "Phone Validate",
+            "description": "Parse, validate and get location information about a phone number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PhoneValidatePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PhoneVerifyPost": {
+            "main": "./lib/actions/PhoneVerifyPost.js",
+            "title": "Phone Verify",
+            "description": "Make an automated call to any valid phone number and playback a unique security code",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PhoneVerifyPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "QrCodePost": {
+            "main": "./lib/actions/QrCodePost.js",
+            "title": "QR Code",
+            "description": "Generate a QR code as a PNG image. See: https://www.neutrinoapi.com/api/qr-code/",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/QrCodePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SmsVerifyPost": {
+            "main": "./lib/actions/SmsVerifyPost.js",
+            "title": "SMS Verify",
+            "description": "Send a unique security code to any mobile device via SMS",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SmsVerifyPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UrlInfoPost": {
+            "main": "./lib/actions/UrlInfoPost.js",
+            "title": "URL Info",
+            "description": "Parse, analyze and retrieve content from the supplied URL",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UrlInfoPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UserAgentInfoPost": {
+            "main": "./lib/actions/UserAgentInfoPost.js",
+            "title": "User Agent Info",
+            "description": "Parse, validate and get detailed user-agent information from a user agent string",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UserAgentInfoPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "VerifySecurityCodePost": {
+            "main": "./lib/actions/VerifySecurityCodePost.js",
+            "title": "Verify Security Code",
+            "description": "Check if a security code from one of the verify APIs is valid",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/VerifySecurityCodePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

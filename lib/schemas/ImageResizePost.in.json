@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "width": {
+                    "description": "Width to resize to (in px)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "height": {
+                    "description": "Height to resize to (in px)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "format": {
+                    "description": "The output image format, can be either png or jpg",
+                    "type": "string",
+                    "default": "png"
+                },
+                "image_url": {
+                    "description": "The URL to the source image",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "image-url"
+            ]
+        }
+    }
+}

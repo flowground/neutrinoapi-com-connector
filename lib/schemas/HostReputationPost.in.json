@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "host": {
+                    "description": "An IPv4 address or a domain name. If you supply a domain name it will be checked against the URI DNSBL list",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                }
+            }
+        }
+    }
+}

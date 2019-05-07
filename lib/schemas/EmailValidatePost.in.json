@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "description": "The email address",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "fix_typos": {
+                    "description": "Automatically attempt to fix typos in the address",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        }
+    }
+}

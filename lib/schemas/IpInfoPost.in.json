@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "ip": {
+                    "description": "The IP address",
+                    "type": "string"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "reverse_lookup": {
+                    "description": "Do a reverse DNS (PTR) lookup. This option can add extra delay to the request so only use it if you need it",
+                    "type": "boolean",
+                    "default": false
+                }
+            }
+        }
+    }
+}

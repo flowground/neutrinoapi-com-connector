@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "latitude": {
+                    "description": "The location latitude",
+                    "type": "number",
+                    "format": "double"
+                },
+                "longitude": {
+                    "description": "The location longitude",
+                    "type": "number",
+                    "format": "double"
+                },
+                "output_case": {
+                    "type": "string",
+                    "enum": [
+                        "camel"
+                    ]
+                },
+                "language_code": {
+                    "description": "The language to display results in, available languages are: de, en, es, fr, it, pt, ru",
+                    "type": "string",
+                    "default": "en"
+                }
+            }
+        }
+    }
+}
